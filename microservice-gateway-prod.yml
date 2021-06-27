@@ -28,16 +28,7 @@ zuul:
       sensitive-headers:
       service-id: microservice-uaa
 
-
-# #Configuracion a Gateway (Spring cloud)
-# spring:
-#   cloud:
-#     gateway:
-#       discovery:
-#         locator:
-#           enabled: true
-#       routes:
-#       - id: microservice-curso
-#         uri: lb://microservice-curso
-#         predicates:
-#         - Path=/cursos/**
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:4444/user

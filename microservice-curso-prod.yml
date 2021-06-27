@@ -14,6 +14,12 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:4444/user
+      
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"     
